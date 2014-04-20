@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Evasion à avignon</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+<style>
+  .navbar{
+    min-height: 100px;
+  }
+  .navbar-default{
+    background-image: linear-gradient(to bottom,#000000 0,#000000 100%);   
+    border-radius: 0px;
+    background-color: #000000;
+    border-color: #000000; 
+  }
+
+    /* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        background-color: #3F3F44;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #000000;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+      .container .credit {
+        margin: 20px 0;
+      }
+
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img height="80" src="logo.jpg"/></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+  <div class="container">
+    <div id="content">
+      <div class="col-md-6 well">
+        <div class="jumbotron">
+          <h1>Évasion à Avignon!</h1>
+          <p>Les Évadés de la Rue Barrow investissent avignon durant le festival, accepterez vous de devenir leur complice?</p>
+          <a class="btn btn-primary" href="tel://33-123-456-789">Réserver (01 23 45 67 89)</a>
+        </div>
+      </div>
+      <div id="sharydiv" class="col-md-6">
+
+       <iframe id="sharyframe" width="480" height="480" scrolling="no" frameborder="0" src="https://www.sharypic.com/events/4s86lc12377ardw0/widget?collection=all&theme=dark&autoplay=true&share=true&scoped_to=pictures_and_videos"><a href="https://www.sharypic.com/4s86lc12377ardw0/all" title="ps171 - Les photos et vidéos collectés avec sharypic" >ps171 - Les photos et vidéos collectés avec sharypic</a></iframe>
+
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+      <div class="container">
+        <p class="muted credit">Les Évadés de la Rue Barrow.</p>
+      </div>    
+  </div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    var update_iframe_width = function(width){$('#sharyframe').width(width).height(width);};
+
+    var width = $(window).width();
+      $(window).resize(function(){
+         if($(this).width() != width){
+            width = $(this).width();
+            update_iframe_width($("#sharydiv").width());
+         }
+    });
+
+    update_iframe_width($("#sharydiv").width());
+    
+  });
+
+  
+
+</script>
+
+
+</body>
+</html>
